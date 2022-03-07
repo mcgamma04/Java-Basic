@@ -24,20 +24,28 @@ public class BasicTutor {
 //        cal.age(age);
 
         //get score
-        int score;
-        System.out.println("Enter score: ");
-        score = scan.nextInt();
-        char gg = cal.getGrade(score);
-        if(gg=='o'){
-            System.out.println("Out of Bound");
-        }else{
-            System.out.println(gg);
-        }
+//        int score;
+//        System.out.println("Enter score: ");
+//        score = scan.nextInt();
+//        char gg = cal.getGrade(score);
+//        if(gg=='o'){
+//            System.out.println("Out of Bound");
+//        }else{
+//            System.out.println(gg);
+//        }
 
 
 //        System.out.println(cal.namee);
 //        System.out.println("Sum= "+cal.add(45,89));
        // System.out.println(cal.getName("King"));
 
+
+        //tennis task
+        int p,c;
+        System.out.println("Enter number of players: ");
+        p = scan.nextInt();
+        System.out.println("Enter numbr of Court: ");
+        c = scan.nextInt();
+        System.out.println(cal.solution(p,c));
     }
 }

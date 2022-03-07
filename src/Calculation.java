@@ -38,5 +38,12 @@ public class Calculation {
         return grade;
     }
 
+public static int solution(int p,int c){
+        if(p/2 > c){
+            return c;
+        }else{
+           return (int)Math.floor(p/2);
+        }
+}
 
 }
