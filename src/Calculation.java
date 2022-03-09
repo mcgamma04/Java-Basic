@@ -1,3 +1,7 @@
+import javax.swing.text.NumberFormatter;
+import java.text.NumberFormat;
+import java.util.Scanner;
+
 public class Calculation {
     public String namee = "Ade";
     public static int add(int a, int b){
@@ -37,12 +41,76 @@ public class Calculation {
         }
         return grade;
     }
+public  String gradeSwitch(int score){
+        String grade = "";
+        switch (score){
+           // case (int) score >=70 && score <=100:
+            case 70:
+                grade="A";
+                break;
+            case 60:
+                grade = "B";
+                break;
+            case 50:
+                grade = "C";
+                break;
+            default:
+                grade="Grade is out of bound";
+        }
+        return grade;
+}
+
+//please select from menu
+    public void output(){
+        Scanner cyrill =  new Scanner(System.in);
+        System.out.println("******Please select rom the list below********");
+        System.out.println("1: getUsername\n2: Add\n3: Exit");
+        System.out.println("******************************");
+        int input = cyrill.nextInt();
+        switch (input){
+            case 1:
+                System.out.println(" Enter your name");
+                String name =  cyrill.next();
+                System.out.println(getName(name));
+                break;
+            case 2:
+                System.out.println("Enter first number: ");
+                int a =  cyrill.nextInt();
+                System.out.println("Enter second Number: ");
+                int b = cyrill.nextInt();
+                System.out.println(add(a,b));
+                break;
+            default:
+                System.err.println("Inavid input. Try again");
+                System.exit(0);
+
+        }
+    }
 
 public static int solution(int p,int c){
         if(p/2 > c){
             return c;
         }else{
            return (int)Math.floor(p/2);
+        }
+}
+
+public static void quadraticSoution(int a, int b, int c){
+        double d,x1,x2;
+        d = b*b-4*a*c;
+        if(d==0){
+            System.out.println("equal roots");
+            x1 = (-b/(2*a));
+            x2 = x1;
+            System.out.println("x1="+ x2+" x2= "+x2);
+        }else if(d > 0){
+            System.out.println("Real Roots");
+            x1 = (-b-Math.sqrt(d))/(2*a);
+            x2 = (-b+Math.sqrt(d))/(2*a);
+            System.out.println("x1="+ x1+",x2= "+x2);
+        }else{
+            System.out.println("Complex Roots");
+
         }
 }
 

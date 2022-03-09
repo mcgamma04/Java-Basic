@@ -41,11 +41,15 @@ public class BasicTutor {
 
 
         //tennis task
-        int p,c;
-        System.out.println("Enter number of players: ");
-        p = scan.nextInt();
-        System.out.println("Enter numbr of Court: ");
-        c = scan.nextInt();
-        System.out.println(cal.solution(p,c));
+//        int p,c;
+//        System.out.println("Enter number of players: ");
+//        p = scan.nextInt();
+//        System.out.println("Enter numbr of Court: ");
+//        c = scan.nextInt();
+//        System.out.println(cal.solution(p,c));
+
+       // System.out.println(cal.gradeSwitch(80));
+       // cal.output();
+        cal.quadraticSoution(2,4,1);
     }
 }
