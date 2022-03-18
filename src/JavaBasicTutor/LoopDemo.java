@@ -1,3 +1,5 @@
+package JavaBasicTutor;
+
 import java.util.Scanner;
 
 public class LoopDemo {
@@ -89,7 +91,7 @@ public class LoopDemo {
 
     }
 
-    public void output2(){
+    protected void output2(){
         String option;
         do{
             System.out.println("***Please select frpm menu below:****");

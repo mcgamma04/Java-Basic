@@ -1,4 +1,8 @@
+package JavaBasicTutor;
+
 import java.sql.SQLOutput;
+import java.util.Arrays;
+import java.util.Locale;
 import java.util.Scanner;
 
 public class StringTutor {
@@ -20,8 +24,35 @@ public class StringTutor {
         //System.out.println(revString("hello"));
         //System.out.println(countVowels("FAithful"));
         //System.out.println(swapCaseAtOddPosition("MikE"));
-        System.out.println(CompressedString("aaabccc"));
+        //System.out.println(CompressedString("ababab"));
+       // System.out.println(palidrome("ebube"));
+//        substring
+        String ph = "Port Harcourt";
+//        for(char str:ph.toCharArray())
+//            System.out.println(str);
+       // System.out.println(ph.substring(8));
+        //indexof
+        //System.out.println(ph.indexOf("j",8));
+        //contains
+        //System.out.println(ph.contains("Port"));
+        //String username = "onyeka";
+       // checkUsername("mike");
+        String look ="I love to be here";
+        //System.out.println(look.replaceAll("\s",""));
+        System.out.println(look.replace("love","hate"));
+
+
+
     }
+    //check username
+    public static  void checkUsername(String str){
+        if(str.equals("mike"))
+            System.out.println("Nice job");
+        else
+            System.out.println("incorrct");
+
+    }
+
 //A program to check the length of a string
     public static int sample(String str){
         //string length
@@ -77,25 +108,33 @@ public class StringTutor {
     }
 
     // A program to compress string
-
+   //a = a
+    //aaa=>a3, zzzbbaa=>z3b2a2
     public static String CompressedString(String str){
+        char [] news = str.toCharArray();
+        Arrays.sort(news);
         int sum=1;
         String result ="";
-        for(int i=0;i<str.length()-1;i++){
+        for(int i=0;i<news.length-1;i++){
 
-                if(str.charAt(i)==str.charAt(i+1)) {
+                if(news[i]==news[i+1]) {
                     sum = sum + 1;
                 }else {
-                    result = result + str.charAt(i) + sum;
+                    result = result + news[i] + sum;
                     sum = 1;
                 }
         }
-        result = result+str.charAt(str.length()-1)+sum;
-        System.out.println(result);
-        if(result.length() < str.length())
-            return  result;
-        else
-            return str;
+        result = result+news[news.length-1]+sum;
+        //System.out.println(result);
+        return (result.length() < str.length())?result:str;
+    }
+
+    public static boolean palidrome(String str){
+        str =  str.toLowerCase();
+        StringBuilder build =  new StringBuilder(str);
+        build.reverse();
+        return build.toString().equals(str);
+
     }
 
 

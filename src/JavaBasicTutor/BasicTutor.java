@@ -1,3 +1,5 @@
+package JavaBasicTutor;
+
 import java.util.Scanner;
 
 public class BasicTutor {
