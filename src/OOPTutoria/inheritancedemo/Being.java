@@ -1,6 +1,4 @@
-package OOPTutoria;
-
-import jdk.swing.interop.SwingInterOpUtils;
+package OOPTutoria.inheritancedemo;
 
 public class Being {
     private String firstname;

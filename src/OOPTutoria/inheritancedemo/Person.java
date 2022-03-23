@@ -1,4 +1,4 @@
-package OOPTutoria;
+package OOPTutoria.inheritancedemo;
 
 //Demonstrating encapsulation
 public class Person {

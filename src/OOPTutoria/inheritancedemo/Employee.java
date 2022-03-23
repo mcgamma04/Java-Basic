@@ -1,4 +1,4 @@
-package OOPTutoria;
+package OOPTutoria.inheritancedemo;
 
 public class Employee {
     private String firstname;

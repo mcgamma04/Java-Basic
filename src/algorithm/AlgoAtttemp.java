@@ -25,4 +25,16 @@ public class AlgoAtttemp {
         }
         return true;
     }
+
+    //Reverse each word in a sentencs
+
+    public String revEachWord(String str){
+        String space =" ";
+        String eachwrd = "";
+        String [] word = str.split("\\s");
+        for(int i = word.length-1; i>=0;i--){
+            eachwrd = eachwrd + word[i]+space;
+        }
+        return  eachwrd;
+    }
 }
