@@ -50,7 +50,7 @@ public class AlgoAtttemp {
         }
         return Arrays.toString(res.toCharArray());
     }
-
+//Algorithm to count the number of occurence of duplicate elements in an array
     public String freqCount (int [] number) {
         /*
             declare and initialize a string variable
