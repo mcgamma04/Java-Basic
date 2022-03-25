@@ -1,4 +1,4 @@
-package OOPTutoria.polymorphismdemo;
+package ooptutoria.polymorphismdemo;
 
 public class Car {
     public void run(){

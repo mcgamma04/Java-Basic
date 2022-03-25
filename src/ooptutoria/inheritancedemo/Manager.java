@@ -1,4 +1,4 @@
-package OOPTutoria.inheritancedemo;
+package ooptutoria.inheritancedemo;
 
 public class Manager extends  Employee{
     private boolean isApprove;

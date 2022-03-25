@@ -1,4 +1,4 @@
-package OOPTutoria.inheritancedemo;
+package ooptutoria.inheritancedemo;
 
 public class Being {
     private String firstname;

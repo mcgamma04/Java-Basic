@@ -1,4 +1,4 @@
-package OOPTutoria.interfacedemo;
+package ooptutoria.interfacedemo;
 
 public  interface  nestedInterface {
     void pregnantWomenDNA();

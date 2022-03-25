@@ -1,14 +1,14 @@
-import OOPTutoria.abtractdemo.Bank;
-import OOPTutoria.abtractdemo.GTB;
-import OOPTutoria.abtractdemo.Zenit;
-import OOPTutoria.interfacedemo.NestedImplem;
-import OOPTutoria.polymorphismdemo.Car;
-import OOPTutoria.polymorphismdemo.ComplIePoly;
-import OOPTutoria.polymorphismdemo.Ferrari;
-import Users.Register;
+import arraytuto.ArrayDemo;
+import ooptutoria.abtractdemo.GTB;
+import ooptutoria.abtractdemo.Zenit;
+import ooptutoria.interfacedemo.NestedImplem;
+import ooptutoria.polymorphismdemo.Car;
+import ooptutoria.polymorphismdemo.ComplIePoly;
+import ooptutoria.polymorphismdemo.Ferrari;
+import users.Register;
 import algorithm.AlgoAtttemp;
 
-import java.util.Scanner;
+import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
@@ -45,11 +45,13 @@ public class Main {
         Ferrari ff =  new Ferrari();
 //        f.run();
         ComplIePoly cp =  new ComplIePoly();
-        cp.add(3);
-        cp.add(3.4,2);
-
-
-
+//        cp.add(3);
+//        cp.add(3.4,2);
+        ArrayDemo ard =  new ArrayDemo();
+        //ard.findMinAndMax(101,34,67,89,1000);
+        int[] nums = new int[]{1,2,3,4,2,7,8,8,3};
+//        System.out.println(atp.printDuplicate(nums));
+        System.out.println(atp.freqCount(nums));
 
     }
 }

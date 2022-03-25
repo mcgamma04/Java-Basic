@@ -1,4 +1,4 @@
-package OOPTutoria.abtractdemo;
+package ooptutoria.abtractdemo;
 
 public class GTB extends Bank{
     @Override

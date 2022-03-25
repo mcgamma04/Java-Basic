@@ -1,4 +1,4 @@
-package OOPTutoria.abtractdemo;
+package ooptutoria.abtractdemo;
 
 public class Zenit extends Bank {
     @Override

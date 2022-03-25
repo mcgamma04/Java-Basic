@@ -1,6 +1,6 @@
-package Users;
+package users;
 
-import OOPTutoria.inheritancedemo.Person;
+import ooptutoria.inheritancedemo.Person;
 
 import java.util.Scanner;
 

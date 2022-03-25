@@ -1,4 +1,4 @@
-package OOPTutoria.interfacedemo;
+package ooptutoria.interfacedemo;
 
 public interface Util extends BankInterface {
     public void cableSub(int decoderId, String availPackage);

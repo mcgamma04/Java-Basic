@@ -1,4 +1,4 @@
-package OOPTutoria.polymorphismdemo;
+package ooptutoria.polymorphismdemo;
 
 public class Ferrari extends Car{
     public void run(){

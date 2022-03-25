@@ -1,7 +1,5 @@
-package JavaBasicTutor;
+package javabasictutor;
 
-import javax.swing.text.NumberFormatter;
-import java.text.NumberFormat;
 import java.util.Scanner;
 
 public class Calculation {

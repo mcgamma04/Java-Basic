@@ -1,4 +1,4 @@
-package OOPTutoria.interfacedemo;
+package ooptutoria.interfacedemo;
 
 public class Transaction implements BankInterface {
     @Override

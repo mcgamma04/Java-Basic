@@ -1,8 +1,6 @@
-package JavaBasicTutor;
+package javabasictutor;
 
-import java.sql.SQLOutput;
 import java.util.Arrays;
-import java.util.Locale;
 import java.util.Scanner;
 
 public class StringTutor {

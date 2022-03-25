@@ -1,4 +1,4 @@
-package OOPTutoria.abtractdemo;
+package ooptutoria.abtractdemo;
 
 public abstract class Bank {
 

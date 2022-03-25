@@ -1,4 +1,4 @@
-package OOPTutoria.interfacedemo;
+package ooptutoria.interfacedemo;
 
 public class DSTV implements  BankInterface,Util{
     @Override
