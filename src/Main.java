@@ -1,4 +1,5 @@
 import arraytuto.ArrayDemo;
+import collectiondemo.ListDemo;
 import ooptutoria.abtractdemo.GTB;
 import ooptutoria.abtractdemo.Zenit;
 import ooptutoria.interfacedemo.NestedImplem;
@@ -51,7 +52,10 @@ public class Main {
         //ard.findMinAndMax(101,34,67,89,1000);
         int[] nums = new int[]{1,2,3,4,2,7,8,8,3};
 //        System.out.println(atp.printDuplicate(nums));
-        System.out.println(atp.freqCount(nums));
+       // System.out.println(atp.freqCount(nums));
+        //System.out.println(atp.isValidSubString("pqrstyu","rspu"));
+        ListDemo ld =  new ListDemo();
+        ld.people();
 
     }
 }

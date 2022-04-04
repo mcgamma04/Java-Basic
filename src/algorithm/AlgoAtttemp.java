@@ -96,4 +96,27 @@ public class AlgoAtttemp {
 
     }
 
+    //A program that return valid substring e,g
+    //ade => de return true, but da => false;
+    public boolean isValidSubString(String str1, String str2){
+//        if(str1.length()==0)
+//            return true;
+        int i = 0;
+        int j = 0;
+        while(i < str2.length() && j<str1.length()){
+
+            if(str2.charAt(i)==str1.charAt(j)){
+                i++;
+            }
+            j++;
+        }
+        if (i==str2.length()){
+            return  true;
+        }else{
+            return false;
+        }
+
+
+    }
+
 }
