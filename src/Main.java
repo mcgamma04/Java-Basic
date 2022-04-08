@@ -1,5 +1,8 @@
 import arraytuto.ArrayDemo;
 import collectiondemo.ListDemo;
+import collectiondemo.QueueDemo;
+import collectiondemo.SetDemo;
+import errorpackage.Uncheeck;
 import ooptutoria.abtractdemo.GTB;
 import ooptutoria.abtractdemo.Zenit;
 import ooptutoria.interfacedemo.NestedImplem;
@@ -9,7 +12,7 @@ import ooptutoria.polymorphismdemo.Ferrari;
 import users.Register;
 import algorithm.AlgoAtttemp;
 
-import java.util.Arrays;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -55,7 +58,42 @@ public class Main {
        // System.out.println(atp.freqCount(nums));
         //System.out.println(atp.isValidSubString("pqrstyu","rspu"));
         ListDemo ld =  new ListDemo();
-        ld.people();
+        //ld.people();
+        //ld.numbers();
+//        ArrayList<String> it =  new ArrayList<>();
+//        it.add("mike");
+//        it.add("milk");
+//        it.add("fanta");
+//        it.add("mouse");
+//        it.add("keyboard");
+//        ld.myitems(it);
 
+        QueueDemo qd = new QueueDemo();
+      // qd.priorityDemo();
+//        for(int i=20;i>0;i--){
+//            System.out.println(i);
+//        }
+
+//         qd.being();
+
+        SetDemo sd = new SetDemo();
+        //sd.setExample();
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.println("Enter Point: ");
+//        int pt =  scanner.nextInt();
+//        System.out.println("Enter Attempts: ");
+//       int at =  scanner.nextInt();
+//        new Uncheeck().average(pt,at);
+
+//        int[] num =  {34,6,78};
+//        try {
+//            System.out.println(num[4]);
+//        }catch (ArrayIndexOutOfBoundsException | ArithmeticException aa){
+//            System.out.println("The element does not exits ");
+//        }finally {
+//            System.out.println("Problem resolved");
+//        }
+
+        ld.myNumbers();
     }
 }
