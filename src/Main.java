@@ -121,7 +121,8 @@ public class Main {
 //            System.out.println("");
 //        }}
 
-        //
+        //Hashmap is thread safe
+
         Map<String,String> person = new HashMap<>();
         person.put("firstname","Michael");
         person.put("Lastname","Adebayo");
