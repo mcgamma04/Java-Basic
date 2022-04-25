@@ -4,6 +4,8 @@ import collectiondemo.ListDemo;
 import collectiondemo.QueueDemo;
 import collectiondemo.SetDemo;
 import errorpackage.Uncheeck;
+import mutithreading.MyRunnable;
+import mutithreading.ThreadDemo;
 import ooptutoria.abtractdemo.GTB;
 import ooptutoria.abtractdemo.Zenit;
 import ooptutoria.inheritancedemo.Person;
@@ -122,20 +124,31 @@ public class Main {
 //        }}
 
         //Hashmap is thread safe
+//
+//        Map<String,String> person = new HashMap<>();
+//        person.put("firstname","Michael");
+//        person.put("Lastname","Adebayo");
+//        person.put("Age",String.valueOf(25));
+//        person.put("Lastname","Deborah");
+//        if(person.values().contains("Michael")){
+//            System.out.println("yes ");
+//
+//        }else{
+//            System.out.println("no");
+//        }
+////        System.out.println(person.values());
+//       // System.out.println(person);
 
-        Map<String,String> person = new HashMap<>();
-        person.put("firstname","Michael");
-        person.put("Lastname","Adebayo");
-        person.put("Age",String.valueOf(25));
-        person.put("Lastname","Deborah");
-        if(person.values().contains("Michael")){
-            System.out.println("yes ");
-
-        }else{
-            System.out.println("no");
-        }
-//        System.out.println(person.values());
-       // System.out.println(person);
+        ThreadDemo tdm = new ThreadDemo();
+        MyRunnable mrb = new MyRunnable();
+        Thread thread = new Thread(mrb);
+        tdm.start();
+//        try {
+//            tdm.join();
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
+        thread.start();
 
     }
 }
