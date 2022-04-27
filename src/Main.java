@@ -4,6 +4,7 @@ import collectiondemo.ListDemo;
 import collectiondemo.QueueDemo;
 import collectiondemo.SetDemo;
 import errorpackage.Uncheeck;
+import jdbc.StudentView;
 import mutithreading.MyRunnable;
 import mutithreading.ThreadDemo;
 import ooptutoria.abtractdemo.GTB;
@@ -142,13 +143,16 @@ public class Main {
         ThreadDemo tdm = new ThreadDemo();
         MyRunnable mrb = new MyRunnable();
         Thread thread = new Thread(mrb);
-        tdm.start();
-//        try {
-//            tdm.join();
-//        } catch (InterruptedException e) {
-//            e.printStackTrace();
-//        }
-        thread.start();
+//        tdm.start();
+////        try {
+////            tdm.join();
+////        } catch (InterruptedException e) {
+////            e.printStackTrace();
+////        }
+//        thread.start();
+
+        StudentView stv =  new StudentView();
+        stv.outPut();
 
     }
 }
