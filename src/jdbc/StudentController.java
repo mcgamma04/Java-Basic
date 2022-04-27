@@ -1,6 +1,7 @@
 package jdbc;
 
 
+import javax.swing.*;
 import  java.sql.*;
 public class StudentController {
     Database db =  new Database();
@@ -20,6 +21,7 @@ public class StudentController {
                if (upd==0){
                    return false;
                }else{
+                   JOptionPane.showMessageDialog(null,upd+" record inserted successfully","aptech",JOptionPane.INFORMATION_MESSAGE);
                    System.out.println(upd+" record inserted");
                }
 
