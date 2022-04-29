@@ -8,5 +8,7 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="mysql-connector-java-8.0.29" level="project" />
+    <orderEntry type="library" name="btc-ascii-table-1.0-sources" level="project" />
+    <orderEntry type="library" name="btc-ascii-table-1.0" level="project" />
   </component>
 </module>

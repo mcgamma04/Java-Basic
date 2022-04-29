@@ -1,4 +1,4 @@
-package jdbc;
+package jdbc.models;
 
 public class Student {
    private  int id;

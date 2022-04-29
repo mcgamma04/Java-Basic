@@ -1,8 +1,8 @@
-package jdbc;
+package jdbc.dbconnection;
 
 import java.sql.*;
 
-public class Database {
+public class  Database {
     Connection connection;
     public boolean connectDB(){
         try {

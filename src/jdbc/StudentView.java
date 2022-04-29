@@ -1,6 +1,9 @@
 package jdbc;
 
+import jdbc.models.Student;
+
 import javax.swing.*;
+import java.sql.SQLException;
 
 public class StudentView {
     Student std = new Student();
@@ -21,7 +24,7 @@ public class StudentView {
           choice =Integer.parseInt(JOptionPane.showInputDialog(null,"Enter your choice\n1: Add Student\n2: Display Student\n3:Search\nUpdate\n5:Delete\n0:Exit","Aptech",JOptionPane.INFORMATION_MESSAGE));
             switch (choice){
                 case 1:
-                    String fname =JOptionPane.showInputDialog(null,"Enter your Firstname","Aptech",JOptionPane.INFORMATION_MESSAGE);
+                     String fname =JOptionPane.showInputDialog(null,"Enter your Firstname","Aptech",JOptionPane.INFORMATION_MESSAGE);
                     String lname =JOptionPane.showInputDialog(null,"Enter your Lastname","Aptech",JOptionPane.INFORMATION_MESSAGE);
                     String email =JOptionPane.showInputDialog(null,"Enter your Email","Aptech",JOptionPane.INFORMATION_MESSAGE);
                     String password =JOptionPane.showInputDialog(null,"Enter your Password","Aptech",JOptionPane.INFORMATION_MESSAGE);
@@ -30,7 +33,22 @@ public class StudentView {
                     std.setEmail(email);
                     std.setPassword(password);
                     str.saveStudent(std);
-
+                    break;
+                case 2:
+                    str.displayAll();
+                    break;
+                case 3:
+                    String ema =JOptionPane.showInputDialog(null,"Enter your Email","Aptech",JOptionPane.INFORMATION_MESSAGE);
+                    std.setEmail(ema);
+                    str.Search(std);
+                case 5:
+                    String emai =JOptionPane.showInputDialog(null,"Enter your Email","Aptech",JOptionPane.INFORMATION_MESSAGE);
+                    String fname1 =JOptionPane.showInputDialog(null,"Enter your Firstname","Aptech",JOptionPane.INFORMATION_MESSAGE);
+                    String lname1 =JOptionPane.showInputDialog(null,"Enter your Lastname","Aptech",JOptionPane.INFORMATION_MESSAGE);
+                    std.setEmail(emai);
+                    std.setFirstname(fname1);
+                    std.setLastname(lname1);
+                    str.update(std);
             }
         }while(choice !=0);
     }
