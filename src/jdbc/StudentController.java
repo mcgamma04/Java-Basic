@@ -124,4 +124,30 @@ ASCIITable.getInstance().printTable(tableHeaders, tableData);
 
         }
   }
+
+    public void delete(Student student){
+        String DELETE =  "DELETE FROM student WHERE email =  ?";
+        if(db.connectDB()){
+            try {
+                ps = db.getConnection().prepareStatement(SEARCH);
+                ps.setString(1,student.getEmail());
+                ResultSet rs =  ps.executeQuery();
+
+                if(rs.next()){
+                    email = rs.getString("email");
+                    if(email.equalsIgnoreCase(student.getEmail())){
+                        ps = db.getConnection().prepareStatement(DELETE);
+                        ps.setString(1, student.getEmail());
+                        int upd =  ps.executeUpdate();
+                        if(upd==1){
+                            JOptionPane.showMessageDialog(null,"Record deleted successfully");
+                        }
+                    }
+                }
+
+            }catch (SQLException sqlException){}
+
+        }
+    }
+
 }

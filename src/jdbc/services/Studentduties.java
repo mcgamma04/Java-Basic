@@ -8,6 +8,7 @@ public interface Studentduties {
      void displayAll();
      void  Search(Student student);
      void update(Student student);
+     void delete(Student student);
 
 
 }

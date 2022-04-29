@@ -1,5 +1,6 @@
 package jdbc;
 
+import jdbc.exceptions.WrongOption;
 import jdbc.models.Student;
 
 import javax.swing.*;
@@ -41,7 +42,7 @@ public class StudentView {
                     String ema =JOptionPane.showInputDialog(null,"Enter your Email","Aptech",JOptionPane.INFORMATION_MESSAGE);
                     std.setEmail(ema);
                     str.Search(std);
-                case 5:
+                case 4:
                     String emai =JOptionPane.showInputDialog(null,"Enter your Email","Aptech",JOptionPane.INFORMATION_MESSAGE);
                     String fname1 =JOptionPane.showInputDialog(null,"Enter your Firstname","Aptech",JOptionPane.INFORMATION_MESSAGE);
                     String lname1 =JOptionPane.showInputDialog(null,"Enter your Lastname","Aptech",JOptionPane.INFORMATION_MESSAGE);
@@ -49,6 +50,14 @@ public class StudentView {
                     std.setFirstname(fname1);
                     std.setLastname(lname1);
                     str.update(std);
+                    break;
+                case 5:
+                    String emaii =JOptionPane.showInputDialog(null,"Enter your Email","Aptech",JOptionPane.INFORMATION_MESSAGE);
+                    std.setEmail(emaii);
+                    str.delete(std);
+                    break;
+                default:
+                      throw new WrongOption("Wrong input");
             }
         }while(choice !=0);
     }
