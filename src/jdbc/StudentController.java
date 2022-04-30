@@ -52,21 +52,33 @@ public class StudentController implements Studentduties {
             try{
                  ps = db.getConnection().prepareStatement(DISP);
                 ResultSet rs =  ps.executeQuery();
-               System.out.println("Name\t\t\t+Email");
+               //System.out.println("Name\t\t\t+Email");
                // String [] tableHeaders = { "Student Name", "Email"};
+                String leftAlignFormat = "| %-20s | %-15s      |%n";
+
+                System.out.format("+----------------------+------------------------+%n");
+                System.out.format("|  Name                |      Email             |%n");
+                System.out.format("+----------------------+------------------------+%n");
 
 
                 while(rs.next()){
                    name =  rs.getString("firstname")+" "+ rs.getString("lastname");
                    email =  rs.getString("email");
-               System.out.println(name+"\t\t\t\t"+email);
+              // System.out.println(name+"\t\t\t\t"+email);
 //                    String[][] tableData = {
 //                            { name,email },
 //
 //                    };
 //
                    // ASCIITable.getInstance().printTable(tableHeaders, tableData);
+
+
+
+                        System.out.format(leftAlignFormat, name, email);
+
+
                 }
+                System.out.format("+-----------------+------+%n");
             }catch (SQLException sqlException){}
         }
   }

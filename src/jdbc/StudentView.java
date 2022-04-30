@@ -10,7 +10,7 @@ public class StudentView {
     Student std = new Student();
     StudentController str = new StudentController();
     public void outPut(){
-        int choice;
+        int choice = 0;
         do{
             System.out.println("***********************");
             System.out.println("___SELECT FROM MENU___");
@@ -21,9 +21,13 @@ public class StudentView {
             System.out.println("[[ 5: Update  Student  ]]");
             System.out.println("[[ 0: Exit             ]]");
             System.out.println("************************");
+  try {
+      choice = Integer.parseInt(JOptionPane.showInputDialog(null, "Enter your choice\n1: Add Student\n2: Display Student\n3:Search\nUpdate\n5:Delete\n0:Exit", "Aptech", JOptionPane.INFORMATION_MESSAGE));
+  }catch (NumberFormatException nfe){
+      System.out.println("Only number is allowed");
+  }
+          switch (choice){
 
-          choice =Integer.parseInt(JOptionPane.showInputDialog(null,"Enter your choice\n1: Add Student\n2: Display Student\n3:Search\nUpdate\n5:Delete\n0:Exit","Aptech",JOptionPane.INFORMATION_MESSAGE));
-            switch (choice){
                 case 1:
                      String fname =JOptionPane.showInputDialog(null,"Enter your Firstname","Aptech",JOptionPane.INFORMATION_MESSAGE);
                     String lname =JOptionPane.showInputDialog(null,"Enter your Lastname","Aptech",JOptionPane.INFORMATION_MESSAGE);
@@ -56,9 +60,13 @@ public class StudentView {
                     std.setEmail(emaii);
                     str.delete(std);
                     break;
+              case 0:
+                  JOptionPane.showMessageDialog(null, "Thanks for using the app. Bye");
+                  System.exit(0);
                 default:
                       throw new WrongOption("Wrong input");
             }
         }while(choice !=0);
+
     }
 }
