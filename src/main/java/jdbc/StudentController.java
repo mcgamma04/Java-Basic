@@ -1,6 +1,7 @@
 package jdbc;
 
 
+import com.bethecoder.ascii_table.impl.JDBCASCIITableAware;
 import jdbc.dbconnection.Database;
 import jdbc.exceptions.RecordNotFoundExcecption;
 import jdbc.models.Student;
@@ -64,6 +65,8 @@ public class StudentController implements Studentduties {
                 while(rs.next()){
                    name =  rs.getString("firstname")+" "+ rs.getString("lastname");
                    email =  rs.getString("email");
+
+
               // System.out.println(name+"\t\t\t\t"+email);
 //                    String[][] tableData = {
 //                            { name,email },
@@ -72,9 +75,7 @@ public class StudentController implements Studentduties {
 //
                    // ASCIITable.getInstance().printTable(tableHeaders, tableData);
 
-
-
-                        System.out.format(leftAlignFormat, name, email);
+                    System.out.format(leftAlignFormat, name, email);
 
 
                 }
