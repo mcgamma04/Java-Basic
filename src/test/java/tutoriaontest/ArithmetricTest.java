@@ -1,4 +1,4 @@
-package equation;
+package tutoriaontest;
 
 import org.junit.jupiter.api.Test;
 

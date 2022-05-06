@@ -1,4 +1,4 @@
-package equation;
+package tutoriaontest;
 
 public class Arithmetric {
 
