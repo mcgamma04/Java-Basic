@@ -3,24 +3,24 @@ import collectiondemo.Employee;
 import collectiondemo.ListDemo;
 import collectiondemo.QueueDemo;
 import collectiondemo.SetDemo;
-import errorpackage.Uncheeck;
 import jdbc.StudentView;
 import mutithreading.MyRunnable;
 import mutithreading.ThreadDemo;
 import ooptutoria.abtractdemo.GTB;
 import ooptutoria.abtractdemo.Zenit;
-import ooptutoria.inheritancedemo.Person;
 import ooptutoria.interfacedemo.NestedImplem;
 import ooptutoria.polymorphismdemo.Car;
 import ooptutoria.polymorphismdemo.ComplIePoly;
 import ooptutoria.polymorphismdemo.Ferrari;
+import security.Protection;
 import users.Register;
 import algorithm.AlgoAtttemp;
 
+import java.io.UnsupportedEncodingException;
 import java.util.*;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws UnsupportedEncodingException {
         Register rr = new Register();
         //rr.addUser();
 //        System.out.println(rr.outPut());
@@ -151,8 +151,14 @@ public class Main {
 ////        }
 //        thread.start();
 
-        StudentView stv =  new StudentView();
-        stv.outPut();
+        StudentView stv = new StudentView();
+        // stv.outPut();
+        Protection sec =  new Protection();
+        System.out.println(sec.encrypt("noble2020"));
+        System.out.println(sec.decrypt("QWRlYmF5bw=="));
+//        System.out.println("My password:"+sec.login("noble2020"));
+//        System.out.println("My password:"+sec.login("noble2020"));
 
     }
+
 }
